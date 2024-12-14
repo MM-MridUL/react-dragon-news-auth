@@ -26,7 +26,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -56,21 +56,40 @@ const Navbar = () => {
           </ul>
         </div>
             <div className="navbar-end">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+            {
+              user ? <>
+              
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-            <img
+            <img className="mr-9"
                 alt="Tailwind CSS Navbar component"
-                src={userDefaultPic} />
+                src={user.photoURL? user?.photoURL : userDefaultPic } />
+                
+                
             </div>
         </div>
+              </> :
+               <>
+              
+               <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+             <div className="w-10 rounded-full">
+             <img className="mr-9"
+                 alt="Tailwind CSS Navbar component"
+                 src={userDefaultPic} />
+                 
+             </div>
+         </div>
+               </>
+
+            }
          {
           user ?
 
-          <button onClick={handleSignOut} className="btn">SIGNOUT</button>
+          <button onClick={handleSignOut} className="btn bg-[#403F3F] text-white rounded-none">SIGNOUT</button>
 
           :
           <Link to='/login'>
-                <button className="btn">LOGIN</button>
+                <button className="btn bg-[#403F3F] text-white rounded-none">LOGIN</button>
          </Link>
          }
         </div>

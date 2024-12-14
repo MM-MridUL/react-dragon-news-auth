@@ -20,6 +20,7 @@ const Home = () => {
                 </div>
                 {/* news container */}
                 <div className="md:col-span-2 border">
+                <h2 className="text-3xl mb-4">Dragon News Home</h2>
                   {
                     news.map(aNews=> <NewsCard
                     key={aNews._id}

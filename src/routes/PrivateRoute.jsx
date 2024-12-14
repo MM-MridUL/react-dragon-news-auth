@@ -22,6 +22,6 @@ const PrivateRoute = ({children}) => {
 
 export default PrivateRoute;
 
-PrivateRoute.propTypes={
+PrivateRoute.propTypes= {
     children: PropTypes.node
 }
