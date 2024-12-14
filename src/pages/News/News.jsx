@@ -25,8 +25,8 @@ const News = () => {
         <div>
             <Header></Header>
             <Navbar></Navbar>
-            <div className="grid grid-cols-4">
-                <div className="col-span-3">
+            <div className="grid sm:grid-cols-4">
+                <div className="col-span-2 md:col-span-3">
                 <h2 className="text-3xl mb-4">Dragon News</h2>
                <div className="border rounded p-4">
                 <img className="w-full" src={news?.image_url} alt="News" />
@@ -37,7 +37,7 @@ const News = () => {
                 </Link>
                </div>
                 </div>
-                <div>
+                <div className="col-span-2 md:col-span-1">
                     <RightSideNav></RightSideNav>
 
                 </div>
